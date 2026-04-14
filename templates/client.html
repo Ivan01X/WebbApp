@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang>
+    
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Twidder.</title>
+        <link href="../static/client.css" type="text/css" rel="stylesheet">
+        <script src="../static/client.js" type="text/javascript"></script>
+        <script src="../static/serverstub.js" type="text/javascript"></script>
+        <script type=”text/view” id="welcomeScript"> 
+            <img id="twidderPic" src="../static/wimage.png">
+            <div class="loginSignupSection">
+                <form method="post" action="" id="login" onsubmit="loginFunc(event)">
+                    <div class="loginText">
+                        Email:<br/>
+                        Password:<br/>
+                    </div>
+                    <div class="loginBox">
+                        <input id="loginEmail" type="email" required /><br/>
+                        <input id="loginPSW" type="password" required /><br/>
+                        <button type="submit">Login</button>
+                    </div>
+
+                    <div id="loginFeedback"> </div>
+                </form>
+    
+                <form method="post" action="" id="signup" onsubmit="signUpFunc(event)">
+                    <h4 id="signupHeadline"> Sign up here </h4> <br/>
+                    <div class="signupText">
+                        First name: <br/>
+                        Family name:<br/>
+                        Gender:<br/>
+                        City:<br/>
+                        Country:<br/>
+                        Email:<br/>
+                        Password:<br/>
+                        Repeat PSW:<br/>
+                    </div>
+                    <div class="signupBox">
+                        <input id="fiName" type="text" required/><br/>
+                        <input id="faName" type="text" required/><br/>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select><br/>
+                        <input id="city" type="text" required/><br/>
+                        <input id="country" type="text" required/><br/>
+                        <input id="sEmail" type="email" required/><br/>
+                        <input id="regPSW" type="password" required/><br/>
+                        <input id="regRepPSW" type="password" required/><br/>
+                        <button type="submit">SignUp</button>
+                        
+                    </div>
+
+                    <div id="signupFeedback"> </div>
+                </form>
+            </div>
+        </script>
+
+        <script type=”text/view” id="profileScript">
+            Welcome to profile<br/>
+            <div>
+                <div>
+                    <button id="homeButton" onclick="toHome()">Home</button>
+                    <button id="browseButton" onclick="toBrowse()">Browse</button>
+                    <button id="accountButton" onclick="toAccount()">Account</button>
+                </div>
+
+                <div id="homeView">
+                    <h2>User Profile</h2> <br/>
+                    <div id="userProfile"></div>
+                    <h2>Message Wall</h2>
+                    <textarea id="messageWall" draggable="true" ondragstart="drag(event)" readonly></textarea> <br/>
+                    <textarea id="messageBox" ondrop="drop(event)" type="text"></textarea><br/>
+                    <button onclick="sendMessage('home')">Post Message</button>
+                    <button onclick="loadMessageWall('messageWall')">Refresh</button>
+                    <div id="homeFeedback"></div>
+                </div>
+
+                <div id="browseView">
+                    <form onsubmit="searchUser(event)">
+                        <input type="email" id="searchEmail" required/>
+                        <button type="submit">Search User</button>
+                        <div id="searchFeedback"></div>
+                    </form>
+                    
+                    <div id="browseInfo">
+                        <h2>User Profile</h2> <br/>
+                        <div id="userProfileOther"></div>
+                        <h2>Message Wall</h2>
+                        <textarea id="messageWallOther" readonly disabled></textarea> <br/>
+                        <textarea id="messageBoxOther" type="text"></textarea><br/>
+                        <button onclick="sendMessage('browse')">Post Message</button>
+                        <button onclick="loadMessageWall('messageWallOther')">Refresh</button>
+                        <div id="browseFeedback"></div>
+                    </div>
+                </div>
+
+                <form method="post" id="accountView" onsubmit="changePassword(event)"><br/>
+                    Old Password: <br/>
+                    <input id="oldPassword" type="password" required/><br/>
+                    New Password: <br/>
+                    <input id="newPassword" type="password" required/><br/>
+                    Repeat New Password: <br/>
+                    <input id="repNewPassword" type="password" required/><br/><br/>
+                    <button onclick="logout()">Logout</button>
+                    <button type="submit">Change Password</button>
+                    
+                    <div id="changePswFeedback"> </div>
+                </form>
+            </div>
+        </script>
+    </head>
+    
+    <body>
+        <div id="welcomeView"></div>
+        <div id="profileView"></div>
+    </body>
+    
+</html>

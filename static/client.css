@@ -1,0 +1,187 @@
+body
+{
+    background: rgb(106, 177, 201);
+}
+#welcomeView
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.loginSignupSection
+{
+    width: 250px;
+    height: 400px;
+}
+#twidderPic
+{
+    border: 1px solid black;
+    margin-right: 10px;
+    width: 340px;
+    height: 400px;
+}
+#login
+{
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.loginText
+{
+    margin-top: 15px;
+    line-height: 25px;
+    float: left;
+}
+.loginBox
+{
+    margin-top: 15px;
+    text-align: right;
+}
+.loginBox input
+{
+    margin-bottom: 2px;
+    width: 120px;
+}
+#signup
+{   
+    background-color: white;
+    border: 1px solid black;
+}
+#signupHeadline
+{   
+    margin-bottom: -3px;
+    text-align: center;
+    clear: left;
+}
+.signupText
+{   
+    line-height: 25px;
+    float: left;
+}
+.signupBox
+{
+    text-align: right;
+    margin-bottom: 22px;
+}
+.signupBox input
+{   
+    width: 120px;
+    margin-bottom: 2px;
+}
+.signupBox select
+{
+    width: 120px;
+    margin-bottom: 2px;
+}
+
+#signupFeedback
+{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none;
+    font-style: oblique;
+    color: red;
+}
+#loginFeedback
+{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none;
+    font-style: oblique;
+    color: red;
+}
+#homeButton
+{
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
+}
+#browseButton
+{
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+#accountButton
+{
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+#homeView
+{
+    display: block;
+}
+#browseView
+{
+    display: none;
+}
+#accountView
+{
+    display: none;
+}
+#changePswFeedback
+{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none;
+    font-style: oblique;
+    color: red;
+}
+
+/*------------HOME----------*/
+#messageBox
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
+#messageWall
+{
+    border-radius: 2px;
+    background-color: white;
+    resize: none;
+    width: 250px;
+    height: 300px;
+    margin-top: -10px;
+}
+#userProfile
+{
+    margin-top: -30px;
+}
+
+/*------------BROWSE----------*/
+#browseInfo
+{
+    display: none;
+}
+#messageBoxOther
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
+#messageWallOther
+{
+    border-radius: 2px;
+    background-color: white;
+    resize: none;
+    width: 250px;
+    height: 300px;
+    margin-top: -10px;
+}
+#userProfileOther
+{
+    margin-top: -30px;
+}
+#searchEmail
+{
+    margin-top: 10px;
+}
